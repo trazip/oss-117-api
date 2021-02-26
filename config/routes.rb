@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :quotes, only: [ :index ]
+      get '/quotes/random', to: 'quotes#random'
     end
   end
 end
