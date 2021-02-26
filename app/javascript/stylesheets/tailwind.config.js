@@ -7,6 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'oss-orange': '#FE5C10',
+      }
     },
   },
   variants: {
