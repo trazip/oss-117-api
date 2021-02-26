@@ -1,5 +1,5 @@
 class Api::V1::QuotesController < Api::V1::BaseController
   def index
-    @quotes = policy_scope(Quotes)
+    @quotes = policy_scope(Quote)
   end
 end

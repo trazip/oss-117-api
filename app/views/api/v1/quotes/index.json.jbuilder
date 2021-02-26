@@ -1,3 +1,6 @@
 json.array! @quotes do |quote|
-  json.extract! quote, :id, :content, :author
+  json.id quote.id
+  json.content quote.content
+  json.author quote.author.fullname
+  json.creator quote.user.username
 end
