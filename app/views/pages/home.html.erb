@@ -9,10 +9,53 @@
     <%= image_tag('oss-117', height: 400, width: 400) %>
   </div>
   <div class="max-w-4xl mx-auto mt-24 bg-white">
-    <div class="h-36">
+    <div class="h-24">
         <h2 class="text-6xl font-bold text-black">Endpoints</h2>
       </div>
-        <div id="random-quote">
+        <div id="quotes-index" class="my-12">
+          <div class="flex flex-row items-center p-2 bg-oss-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+            </svg>
+            <p class="font-bold text-white">Get all the quotes</p>
+          </div>
+          <div class="border border-oss-orange">
+            <div class="flex flex-row items-center p-4">
+              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+              <a href="<%= api_v1_quotes_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_url %></a>
+            </div>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
+                  [
+                    {
+                      {
+                        "content": "J'aime les panoramas.",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Le Caire, nid d'espions",
+                        "creator": "trazip"
+                      },
+                      {
+                        "content": "Chou blanc donc...",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Rio ne répond plus",
+                        "creator": "trazip"
+                      },
+                      {
+                        "content": "Ça suffit Loktar, tu te tais ou je te tais !",
+                        "author": "Gerhard Moeller",
+                        "film": "OSS 117 : Le Caire, nid d'espions",
+                        "creator": "trazip"
+                      }
+                    }
+                    ...
+                  ]
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div id="random-quote" class="my-12">
           <div class="flex flex-row items-center p-2 bg-oss-orange">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
@@ -22,27 +65,24 @@
           <div class="border border-oss-orange">
             <div class="flex flex-row items-center p-4">
               <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_path %></a>
+              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
             </div>
-            <div id="code-block" class="py-2">
-              <code>
-                [
-                  <br>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
                   {
-                    <br>
-                    "quote": "J'aime me battre",
-                    <br>
-                    "author": "Hubert Bonisseur de la Bath"
-                    <br>
+                    "quote": {
+                      "content": "Comment est votre blanquette ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    }
                   }
-                  <br>
-                ]
-                <br>
-              </code>
+                </code>
+              </pre>
             </div>
           </div>
         </div>
-        <div id="several-quotes" class="mt-12">
+        <div id="several-quotes" class="my-12">
           <div class="flex flex-row items-center p-2 bg-oss-orange">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
