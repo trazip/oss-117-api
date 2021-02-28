@@ -9,6 +9,10 @@ class QuotePolicy < ApplicationPolicy
     true
   end
 
+  def update? 
+    true
+  end
+
   def random?
     true
   end
