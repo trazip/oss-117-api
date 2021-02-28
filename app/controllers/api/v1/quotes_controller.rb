@@ -1,5 +1,5 @@
 class Api::V1::QuotesController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show ]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :random ]
   before_action :set_quote, only: [ :show, :update ]
 
   def index
