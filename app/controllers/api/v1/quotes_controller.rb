@@ -5,7 +5,11 @@ class Api::V1::QuotesController < Api::V1::BaseController
   def index
     if params[:n]
       @quotes = policy_scope(Quote).shuffle.take(params[:n].to_i)
-    else 
+    elsif params[:opus] == "1"
+      @quotes = policy_scope(Quote).where(film_id: Film.first.id)
+    elsif params[:opus] == "2"
+      @quotes = policy_scope(Quote).where(film_id: Film.last.id)
+    else
       @quotes = policy_scope(Quote).shuffle
     end 
   end

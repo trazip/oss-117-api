@@ -54,6 +54,33 @@
             </div>
           </div>
         </div>
+        <div id="opus-quote" class="my-12">
+          <div class="flex flex-row items-center p-2 bg-oss-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+            </svg>
+            <p class="font-bold text-white">Get the quotes of a given film</p>
+          </div>
+          <div class="border border-oss-orange">
+            <div class="flex flex-row items-center p-4">
+              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+              <a href="http://localhost:3000/api/v1/quotes?opus=1" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes?opus=1</a>
+            </div>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
+                  {
+                    "quote": {
+                      "content": "Comment est votre blanquette ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    }
+                  }
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
         <div id="random-quote" class="my-12">
           <div class="flex flex-row items-center p-2 bg-oss-orange">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">

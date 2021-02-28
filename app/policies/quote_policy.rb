@@ -10,7 +10,7 @@ class QuotePolicy < ApplicationPolicy
   end
 
   def update? 
-    true
+    record.user == user
   end
 
   def random?
