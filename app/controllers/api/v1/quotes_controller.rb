@@ -1,8 +1,13 @@
 class Api::V1::QuotesController < Api::V1::BaseController
-  # before_action, :set_quote, only: [:random, :show]
+  before_action :set_quote, only: [ :show ]
 
   def index
-    @quotes = policy_scope(Quote)
+    if params[:n]
+      @quotes = policy_scope(Quote).shuffle.take(params[:n].to_i)
+    else 
+      @quotes = policy_scope(Quote).shuffle
+    end
+    
   end
 
   def random
@@ -16,7 +21,8 @@ class Api::V1::QuotesController < Api::V1::BaseController
 
   private 
 
-  # def set_quote
-  #   @quote = Quote.find(params[:id])
-  # end
+  def set_quote
+    @quote = Quote.find(params[:id])
+    authorize @quote
+  end
 end

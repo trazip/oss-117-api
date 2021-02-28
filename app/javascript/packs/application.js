@@ -12,9 +12,7 @@ import "stylesheets/application"
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/night-owl.css';
 import json from 'highlight.js/lib/languages/json';
-import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('json', json);
-hljs.registerLanguage('javascript', javascript);
 
 
 // Call your functions here, e.g:

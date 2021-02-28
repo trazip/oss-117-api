@@ -1,12 +1,14 @@
 <div>
   <div class="flex items-center justify-center min-h-screen bg-oss-orange">
-    <div class="flex flex-col mx-24 ">
+    <div class="flex flex-col mx-24" data-tilt>
       <h1 id="hero-text" class="max-w-6xl font-extrabold text-white text-9xl">
         OSS<span class="text-5xl">117</span>
       </h1>
       <h2 class="font-bold text-white text-7xl">L'API ne répond plus</h2>
     </div>
-    <%= image_tag('oss-117', height: 400, width: 400) %>
+    <div data-tilt style="transform-style: preserve-3d;">
+      <%= image_tag('oss-117', height: 400, width: 400) %>
+    </div>
   </div>
   <div class="max-w-4xl mx-auto mt-24 bg-white">
     <div class="h-24">
@@ -32,20 +34,17 @@
                       {
                         "content": "J'aime les panoramas.",
                         "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Le Caire, nid d'espions",
-                        "creator": "trazip"
+                        "film": "OSS 117 : Le Caire, nid d'espions"
                       },
                       {
                         "content": "Chou blanc donc...",
                         "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Rio ne répond plus",
-                        "creator": "trazip"
+                        "film": "OSS 117 : Rio ne répond plus"
                       },
                       {
                         "content": "Ça suffit Loktar, tu te tais ou je te tais !",
                         "author": "Gerhard Moeller",
-                        "film": "OSS 117 : Le Caire, nid d'espions",
-                        "creator": "trazip"
+                        "film": "OSS 117 : Le Caire, nid d'espions"
                       }
                     }
                     ...
@@ -92,23 +91,123 @@
           <div class="border border-oss-orange">
             <div class="flex flex-row items-center p-4">
               <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="https://oss-117-quotes.herokuapp.com/v1/quotes" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">https://oss-117-quotes.herokuapp.com/v1/quotes</a>
+              <a href="<%= root_url %>api/v1/quotes?n=5" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= root_url %>api/v1/quotes?n=5</a>
             </div>
-            <div id="code-block" class="py-2">
-              <code>
-                [
-                  <br>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
+                  [
+                      {
+                        "content": "J'aime les panoramas.",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Le Caire, nid d'espions"
+                      },
+                      {
+                        "content": "J'aime me battre.",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Le Caire, nid d'espions"
+                      },
+                      {
+                        "content": "Comment est votre blanquette ?",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Le Caire, nid d'espions"
+                      },
+                      {
+                        "content": "Bien, mais dépêchons-nous, je n’ai que quelques 
+                        heures.",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Le Caire, nid d'espions"
+                      },
+                      {
+                        "content": "Vous avez bien une amicale des anciens nazis ?
+                        un club ? une association peut-être ?",
+                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                        "film": "OSS 117 : Rio ne répond plus"
+                      }
+                    ]
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div id="show-quote" class="my-12">
+          <div class="flex flex-row items-center p-2 bg-oss-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+            </svg>
+            <p class="font-bold text-white">Get a specific quote by id</p>
+          </div>
+          <div class="border border-oss-orange">
+            <div class="flex flex-row items-center p-4">
+              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+              <a href="http://localhost:3000/api/v1/quotes/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes/:id</a>
+            </div>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
                   {
-                    <br>
-                    "quote": "J'aime me battre",
-                    <br>
-                    "author": "Hubert Bonisseur de la Bath"
-                    <br>
+                    "quote": {
+                      "content": "Comment est votre blanquette ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    }
                   }
-                  <br>
-                ]
-                <br>
-              </code>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div id="create-quote" class="my-12">
+          <div class="flex flex-row items-center p-2 bg-oss-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+            </svg>
+            <p class="font-bold text-white">Create a new quote</p>
+          </div>
+          <div class="border border-oss-orange">
+            <div class="flex flex-row items-center p-4">
+              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
+            </div>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
+                  {
+                    "quote": {
+                      "content": "Comment est votre blanquette ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    }
+                  }
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div id="create-quote" class="my-12">
+          <div class="flex flex-row items-center p-2 bg-oss-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+            </svg>
+            <p class="font-bold text-white">Modify a quote</p>
+          </div>
+          <div class="border border-oss-orange">
+            <div class="flex flex-row items-center p-4">
+              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
+            </div>
+            <div id="code-block" style="background: #011627;">
+              <pre>
+                <code class="json">
+                  {
+                    "quote": {
+                      "content": "Comment est votre blanquette ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    }
+                  }
+                </code>
+              </pre>
             </div>
           </div>
         </div>
