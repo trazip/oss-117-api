@@ -31,6 +31,17 @@ class Api::V1::QuotesController < Api::V1::BaseController
   def show
   end
 
+  def create
+    @quote = Quote.new(quote_params)
+    @quote.user = current_user
+    authorize @quote
+    if @quote.save
+      render :show, status: :created
+    else
+      render_error
+    end
+  end
+
   private 
 
   def set_quote
