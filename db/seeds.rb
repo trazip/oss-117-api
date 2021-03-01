@@ -14,6 +14,7 @@ User.destroy_all
 
 puts 'Creating main user'
 john = User.create(username: 'johndoe', email: 'john@example.com', password: 'password', password_confirmation: 'password')
+demo = User.create(username: 'demo', email: 'user@demo.com', password: 'password', password_confirmation: 'password')
 
 puts 'Creating authors'
 oss_117 = Author.create(fullname: 'Hubert Bonnisseur de la Bath (alias OSS 117)', user_id: john.id)

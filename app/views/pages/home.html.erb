@@ -274,8 +274,8 @@
               <code class="curl">
                 curl --location --request POST 'http://localhost:3000/api/v1/quotes' \
                       --header 'Content-Type: application/json' \
-                      --header 'X-User-Email: <%= User.first.email %>' \
-                      --header 'X-User-Token: <%= User.first.authentication_token %>' \
+                      --header 'X-User-Email: <%= User.second.email %>' \
+                      --header 'X-User-Token: <%= User.second.authentication_token %>' \
                       --data-raw '{ "quote": { "content": "Jolie voiture ! Dommage qu’elle soit si sale !", "author_id": 1, "film_id": 1 } }'
               </code>
             </pre>
@@ -298,8 +298,8 @@
             <pre>
               <code class="curl">
                 curl --location --request PATCH 'http://localhost:3000/api/v1/quotes/:id' \
-                      --header 'X-User-Email: <%= User.first.email %>' \
-                      --header 'X-User-Token: <%= User.first.authentication_token %>' \
+                      --header 'X-User-Email: <%= User.second.email %>' \
+                      --header 'X-User-Token: <%= User.second.authentication_token %>' \
                       --header 'Content-Type: application/json' \
                       --data-raw '{ "quote": { "content": "Modified quote" } }'
               </code>
@@ -323,9 +323,8 @@
             <pre>
               <code class="curl">
                 curl --location --request DELETE 'http://localhost:3000/api/v1/quotes/:id' \
-                      --header 'Content-Type: application/json' \
-                      --header 'X-User-Email: john@example.com' \
-                      --header 'X-User-Token: 533jUEC7usGbLyduR-if' \
+                      --header 'X-User-Email: <%= User.second.email %>' \
+                      --header 'X-User-Token: <%= User.second.authentication_token %>' \
                       --data-raw ''
               </code>
             </pre>
