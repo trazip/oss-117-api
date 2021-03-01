@@ -17,6 +17,10 @@ class QuotePolicy < ApplicationPolicy
     record.user == user
   end
 
+  def destroy? 
+    record.user == user
+  end
+
   def random?
     true
   end

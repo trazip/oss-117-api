@@ -1,6 +1,6 @@
 class Api::V1::QuotesController < Api::V1::BaseController
   acts_as_token_authentication_handler_for User, except: [ :index, :show, :random ]
-  before_action :set_quote, only: [ :show, :update ]
+  before_action :set_quote, only: [ :show, :update, :destroy ]
 
   def index
     if params[:n]
@@ -40,6 +40,12 @@ class Api::V1::QuotesController < Api::V1::BaseController
     else
       render_error
     end
+  end
+
+  def destroy
+    @quote.destroy
+    head :no_content
+    # No need to create a `destroy.json.jbuilder` view
   end
 
   private 
