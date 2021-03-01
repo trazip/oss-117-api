@@ -11,258 +11,324 @@
     </div>
   </div>
   <div class="max-w-4xl mx-auto mt-24 bg-white">
-    <div class="h-24">
+    <div class="h-24 mt-24">
+        <h2 class="text-6xl font-bold text-black">Informations</h2>
+    </div>
+    <table class="table-fixed">
+      <thead>
+        <tr>
+          <th class="w-1/12 px-4 py-2 text-light-blue-600">Authors</th>
+          <th class="w-1/12 px-4 py-2 text-light-blue-600">author_id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Hubert Bonnisseur de la Bath (alias OSS 117)</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">1</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Larmina El Akmar Betouche</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">2</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Raymond Pelletier</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">3</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Gerhard Moeller</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">4</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Carlotta</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">5</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Dolorès</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">6</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Von Zimmel</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">7</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Heinrich Von Zimmel</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">8</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">Bill Tremendous</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">9</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="mt-2 table-fixed">
+      <thead>
+        <tr>
+          <th class="w-1/12 px-4 py-2 text-light-blue-600">Films</th>
+          <th class="w-1/12 px-4 py-2 text-light-blue-600">film_id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">OSS 117 : Le Caire, nid d'espions</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">1</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium border border-light-blue-500 text-light-blue-600">OSS 117 : Rio ne répond plus</td>
+          <td class="px-4 py-2 font-medium text-center border border-light-blue-500 text-light-blue-600">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="h-24 mt-24">
         <h2 class="text-6xl font-bold text-black">Endpoints</h2>
-      </div>
-        <div id="quotes-index" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Get all the quotes</p>
+    </div>
+    <div class="h-12">
+        <h2 class="text-2xl font-bold text-oss-orange">Unauthenticated</h2>
+    </div>
+      <div id="quotes-index" class="mt-6 mb-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Get all the quotes</p>
+        </div>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+            <a href="<%= api_v1_quotes_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_url %></a>
           </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="<%= api_v1_quotes_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_url %></a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  [
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="json">
+                [
+                  {
                     {
-                      {
-                        "content": "J'aime les panoramas.",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Le Caire, nid d'espions"
-                      },
-                      {
-                        "content": "Chou blanc donc...",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Rio ne répond plus"
-                      },
-                      {
-                        "content": "Ça suffit Loktar, tu te tais ou je te tais !",
-                        "author": "Gerhard Moeller",
-                        "film": "OSS 117 : Le Caire, nid d'espions"
-                      }
+                      "content": "J'aime les panoramas.",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    },
+                    {
+                      "content": "Chou blanc donc...",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Rio ne répond plus"
+                    },
+                    {
+                      "content": "Ça suffit Loktar, tu te tais ou je te tais !",
+                      "author": "Gerhard Moeller",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
                     }
-                    ...
+                  }
+                  ...
+                ]
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div id="opus-quote" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Get the quotes of a given film</p>
+        </div>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+            <a href="http://localhost:3000/api/v1/quotes?opus=1" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes?opus=1</a>
+          </div>
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="json">
+                {
+                  "quote": {
+                    "content": "Comment est votre blanquette ?",
+                    "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                    "film": "OSS 117 : Le Caire, nid d'espions"
+                  }
+                }
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div id="random-quote" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Get a random quote</p>
+        </div>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+            <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
+          </div>
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="json">
+                {
+                  "quote": {
+                    "content": "Comment est votre blanquette ?",
+                    "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                    "film": "OSS 117 : Le Caire, nid d'espions"
+                  }
+                }
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div id="several-quotes" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Get several random quotes</p>
+        </div>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+            <a href="<%= root_url %>api/v1/quotes?n=5" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= root_url %>api/v1/quotes?n=5</a>
+          </div>
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="json">
+                [
+                    {
+                      "content": "J'aime les panoramas.",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    },
+                    {
+                      "content": "J'aime me battre.",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    },
+                    {
+                      "content": "Comment est votre blanquette ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    },
+                    {
+                      "content": "Bien, mais dépêchons-nous, je n’ai que quelques 
+                      heures.",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Le Caire, nid d'espions"
+                    },
+                    {
+                      "content": "Vous avez bien une amicale des anciens nazis ?
+                      un club ? une association peut-être ?",
+                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                      "film": "OSS 117 : Rio ne répond plus"
+                    }
                   ]
-                </code>
-              </pre>
-            </div>
+              </code>
+            </pre>
           </div>
         </div>
-        <div id="opus-quote" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Get the quotes of a given film</p>
+      </div>
+      <div id="show-quote" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Get a specific quote by id</p>
+        </div>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
+            <a href="http://localhost:3000/api/v1/quotes/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes/:id</a>
           </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="http://localhost:3000/api/v1/quotes?opus=1" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes?opus=1</a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  {
-                    "quote": {
-                      "content": "Comment est votre blanquette ?",
-                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                      "film": "OSS 117 : Le Caire, nid d'espions"
-                    }
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="json">
+                {
+                  "quote": {
+                    "content": "Comment est votre blanquette ?",
+                    "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
+                    "film": "OSS 117 : Le Caire, nid d'espions"
                   }
-                </code>
-              </pre>
-            </div>
+                }
+              </code>
+            </pre>
           </div>
         </div>
-        <div id="random-quote" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Get a random quote</p>
+      </div>
+      <div class="h-12">
+        <h2 class="text-2xl font-bold text-oss-orange">Authenticated</h2>
+      </div>
+      <div id="create-quote" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Create a new quote</p>
+        </div>
+        <div class="p-1 border border-oss-orange ">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">POST</span>
+            <a href="<%= api_v1_quotes_url %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_url %></a>
           </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  {
-                    "quote": {
-                      "content": "Comment est votre blanquette ?",
-                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                      "film": "OSS 117 : Le Caire, nid d'espions"
-                    }
-                  }
-                </code>
-              </pre>
-            </div>
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="curl">
+                curl --location --request POST 'http://localhost:3000/api/v1/quotes' \
+                      --header 'Content-Type: application/json' \
+                      --header 'X-User-Email: <%= User.first.email %>' \
+                      --header 'X-User-Token: <%= User.first.authentication_token %>' \
+                      --data-raw '{ "quote": { "content": "Jolie voiture ! Dommage qu’elle soit si sale !", "author_id": 1, "film_id": 1 } }'
+              </code>
+            </pre>
           </div>
         </div>
-        <div id="several-quotes" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Get several random quotes</p>
+      </div>
+      <div id="update-quote" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Modify a quote</p>
+        </div>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">PATCH</span>
+            <a href="<%= api_v1_quotes_path %>/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_url %>/:id</a>
           </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="<%= root_url %>api/v1/quotes?n=5" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= root_url %>api/v1/quotes?n=5</a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  [
-                      {
-                        "content": "J'aime les panoramas.",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Le Caire, nid d'espions"
-                      },
-                      {
-                        "content": "J'aime me battre.",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Le Caire, nid d'espions"
-                      },
-                      {
-                        "content": "Comment est votre blanquette ?",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Le Caire, nid d'espions"
-                      },
-                      {
-                        "content": "Bien, mais dépêchons-nous, je n’ai que quelques 
-                        heures.",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Le Caire, nid d'espions"
-                      },
-                      {
-                        "content": "Vous avez bien une amicale des anciens nazis ?
-                        un club ? une association peut-être ?",
-                        "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                        "film": "OSS 117 : Rio ne répond plus"
-                      }
-                    ]
-                </code>
-              </pre>
-            </div>
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="curl">
+                curl --location --request PATCH 'http://localhost:3000/api/v1/quotes/:id' \
+                      --header 'X-User-Email: <%= User.first.email %>' \
+                      --header 'X-User-Token: <%= User.first.authentication_token %>' \
+                      --header 'Content-Type: application/json' \
+                      --data-raw '{ "quote": { "content": "Modified quote" } }'
+              </code>
+            </pre>
           </div>
         </div>
-        <div id="show-quote" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Get a specific quote by id</p>
-          </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="http://localhost:3000/api/v1/quotes/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes/:id</a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  {
-                    "quote": {
-                      "content": "Comment est votre blanquette ?",
-                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                      "film": "OSS 117 : Le Caire, nid d'espions"
-                    }
-                  }
-                </code>
-              </pre>
-            </div>
-          </div>
+      </div>
+      <div id="delete-quote" class="my-12">
+        <div class="flex flex-row items-center p-2 bg-oss-orange">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+          </svg>
+          <p class="font-bold text-white">Delete a quote</p>
         </div>
-        <div id="create-quote" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Create a new quote</p>
+        <div class="border border-oss-orange">
+          <div class="flex flex-row items-center p-4">
+            <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">DELETE</span>
+            <a href="<%= api_v1_quotes_path %>/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_url %>/:id</a>
           </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  {
-                    "quote": {
-                      "content": "Comment est votre blanquette ?",
-                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                      "film": "OSS 117 : Le Caire, nid d'espions"
-                    }
-                  }
-                </code>
-              </pre>
-            </div>
-          </div>
-        </div>
-        <div id="update-quote" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Modify a quote</p>
-          </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">PATCH</span>
-              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  {
-                    "quote": {
-                      "content": "Comment est votre blanquette ?",
-                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                      "film": "OSS 117 : Le Caire, nid d'espions"
-                    }
-                  }
-                </code>
-              </pre>
-            </div>
-          </div>
-        </div>
-        <div id="delete-quote" class="my-12">
-          <div class="flex flex-row items-center p-2 bg-oss-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="white">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-            <p class="font-bold text-white">Delete a quote</p>
-          </div>
-          <div class="border border-oss-orange">
-            <div class="flex flex-row items-center p-4">
-              <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">DELETE</span>
-              <a href="<%= api_v1_quotes_random_path %>" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange"><%= api_v1_quotes_random_url %></a>
-            </div>
-            <div id="code-block" style="background: #011627;">
-              <pre>
-                <code class="json">
-                  {
-                    "quote": {
-                      "content": "Comment est votre blanquette ?",
-                      "author": "Hubert Bonnisseur de la Bath (alias OSS 117)",
-                      "film": "OSS 117 : Le Caire, nid d'espions"
-                    }
-                  }
-                </code>
-              </pre>
-            </div>
+          <div id="code-block" style="background: #011627;">
+            <pre>
+              <code class="curl">
+                curl --location --request DELETE 'http://localhost:3000/api/v1/quotes/:id' \
+                      --header 'Content-Type: application/json' \
+                      --header 'X-User-Email: john@example.com' \
+                      --header 'X-User-Token: 533jUEC7usGbLyduR-if' \
+                      --data-raw ''
+              </code>
+            </pre>
           </div>
         </div>
       </div>
