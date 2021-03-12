@@ -134,7 +134,7 @@
         <div class="border border-oss-orange">
           <div class="flex flex-row items-center p-4">
             <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-            <a href="http://localhost:3000/api/v1/quotes?opus=1" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes?opus=1</a>
+            <a href="https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes?opus=1" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes?opus=1</a>
           </div>
           <div id="code-block" style="background: #011627;">
             <pre>
@@ -237,7 +237,7 @@
         <div class="border border-oss-orange">
           <div class="flex flex-row items-center p-4">
             <span class="px-4 py-2 font-medium text-white rounded bg-oss-orange">GET</span>
-            <a href="http://localhost:3000/api/v1/quotes/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">http://localhost:3000/api/v1/quotes/:id</a>
+            <a href="https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes/:id" class="mx-4 font-medium underline hover:text-white hover:bg-oss-orange">https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes/:id</a>
           </div>
           <div id="code-block" style="background: #011627;">
             <pre>
@@ -272,7 +272,7 @@
           <div id="code-block" style="background: #011627;">
             <pre>
               <code class="curl">
-                curl --location --request POST 'http://localhost:3000/api/v1/quotes' \
+                curl --location --request POST 'https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes' \
                       --header 'Content-Type: application/json' \
                       --header 'X-User-Email: <%= User.second.email %>' \
                       --header 'X-User-Token: <%= User.second.authentication_token %>' \
@@ -297,7 +297,7 @@
           <div id="code-block" style="background: #011627;">
             <pre>
               <code class="curl">
-                curl --location --request PATCH 'http://localhost:3000/api/v1/quotes/:id' \
+                curl --location --request PATCH 'https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes/:id' \
                       --header 'X-User-Email: <%= User.second.email %>' \
                       --header 'X-User-Token: <%= User.second.authentication_token %>' \
                       --header 'Content-Type: application/json' \
@@ -322,7 +322,7 @@
           <div id="code-block" style="background: #011627;">
             <pre>
               <code class="curl">
-                curl --location --request DELETE 'http://localhost:3000/api/v1/quotes/:id' \
+                curl --location --request DELETE 'https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes/:id' \
                       --header 'X-User-Email: <%= User.second.email %>' \
                       --header 'X-User-Token: <%= User.second.authentication_token %>' \
                       --data-raw ''
